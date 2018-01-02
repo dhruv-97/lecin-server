@@ -107,7 +107,9 @@
             <div class="row text-center">
                 <div class="col-lg-12 wow fadeIn">
                     <h1>About Us</h1>
-                    <p>An organization initially led by the students of University of Delhi, is now an NGO in Delhi</p>
+                    <p>Let’s Educate Children In Need (LECIN) is a Delhi based non-profit organization led by the students from various colleges of the capital city.</p>
+                    <p>Its motive is to provide quality education to the underprivileged children residing in slums, who neither have assets nor opportunity to go to school and study.</p>
+                    <p> The organization aims to impart thorough knowledge and values among children through extra-curricular activities by arranging sessions such as GyanMudra, Kalakriti and Naitikta and has been organizing such events and functions on regular basis in order to enhance their skills in various fields for their overall development.</p>
                     <hr class="colored">
                 </div>
             </div>
@@ -223,7 +225,8 @@
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <span class="quote">The <span class="text-primary">goal</span> is finding that perfect balance between the way something <span class="text-primary">looks</span> and how it <span class="text-primary">functions</span>.</span>
+                    <hr class=" colored">
+                    <span class="quote">The <span class="text-primary">goal</span> is to provide <span class="text-primary">quality</span> elementary education to the slum children who are <span class="text-primary">deprived</span> of basic amenities</span>
                     <hr class=" colored">
                     <a class="btn btn-outline-light page-scroll" href="#contact">Let's Find It</a>
                 </div>
@@ -370,12 +373,12 @@
             </div>
         </div>
     </section>
-    <section class="testimonials bg-gray">
+    <section class="testimonials bg-gray" ng-show="showTests">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <div class="testimonials-carousel">
-                        <div class="item" ng-repeat="test in tests" ng-repeat-owl-carousel carousel-init="carouselInitializer3">
+                    <div class="testimonials-carousel" ng-repeat-owl-carousel carousel-init="carouselInitializer3">
+                        <div class="item" ng-repeat="test in tests" >
                             <div class="row">
                                 <div class="col-lg-12">
                                     <p class="lead">{{test.heading}}</p>
@@ -384,7 +387,7 @@
                                     <a href="#"  class="btn">
                                     <div class="testimonial-info">
                                         <div class="testimonial-img">
-                                            <img ng-src={{test.image}} class="img-circle img-responsive" alt="">
+                                            <img src="assets/img/testimonials/1.jpg" class="img-circle img-responsive" alt="">
                                         </div>
                                         <div class="testimonial-author">
                                             <span class="name">{{test.name}}</span>
@@ -398,7 +401,7 @@
                                             </div>
 
                                         </div>
-                                        <a href="{{test.link}}" class="btn btn-outline-dark">Read More</a>
+                                        <a href="#" class="btn btn-outline-dark">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -424,12 +427,10 @@
                         <hr class="colored">
                         <img src="assets/img/ip.jpg" class="img-responsive">
                         <ul class="list-group">
-                            <li class="list-group-item">31st May, 2015</li>
-                            <li class="list-group-item">Ten interns</li>
-                            <li class="list-group-item">Unlimited Reports</li>
-                            <li class="list-group-item">3,000 Entries per Month</li>
-                            <li class="list-group-item">200 MB Storage</li>
-                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">LECIN began its work in Indraprastha Slum in May 2015. Initially, teaching sessions consisted mainly of general academic awareness. Tests have been conducted regularly to identify and segregate students who wish to study so as to make teaching sessions more effective. Teachers have been working to prepare a well-defined curriculum.</li>
+                            <li class="list-group-item">Each session consisted of two subjects-English and Maths, with one hour dedicated to each subject. Proper session plans were made and coordinators were appointed to conduct smooth functioning of the sessions. The sessions covered NCERT textbooks, basic rules of language and some fun activities in order to help the students have a better understanding of the concepts. </li>
+                            <li class="list-group-item">Till date, regular feedbacks are being taken from the students as well as the volunteers to create a transparent environment. Further, a test of 45 minutes for each subject is conducted at the end of each month to get an idea of the students’ performance. The first session of each month is a Kalakriti session, which focuses on the art and craft abilities of the students. Many educational trips are also conducted from time to time. Roobaru sessions are also conducted which focus on one-on-one interaction of volunteers and students to get the children out of their shells.</li>
+                            <li class="list-group-item">So far, this initiative has focused on thirteen children and has proved to be a huge success.</li>
                         </ul>
                         <a href="#" class="btn btn-outline-dark">Sign Up</a>
                     </div>
@@ -440,12 +441,10 @@
                         <hr class="colored">
                         <img src="assets/img/okhla.jpg" class="img-responsive">
                         <ul class="list-group">
-                            <li class="list-group-item">August 2015</li>
-                            <li class="list-group-item">12 interns</li>
-                            <li class="list-group-item">1.5 KM from Harkesh Nagar Okhla Metro Station</li>
-                            <li class="list-group-item"><strong>3,000</strong> Entries per Month</li>
-                            <li class="list-group-item"><strong>200 MB</strong> Storage</li>
-                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">Work in Okhla slum started in July 2015. Like every initiative, there were many issues which needed to be sorted. For instance, there was a shortage of volunteers due to the reluctance of people associating themselves with a non-profit organization. This resulted in the inability to meet the targets and to handle a large number of students.</li>
+                            <li class="list-group-item">Further, there were some children who had no interest in learning something new. These children disturbed the classes and disrupted the smooth functioning of the sessions. Many efforts were made in making them realize the importance of education. Some of them understood the point and started taking the sessions seriously. Eventually, sixteen children were enrolled under LECIN as they began participating actively in class interactions and completed their home-works religiously.</li>
+                            <li class="list-group-item">There was another major issue- unavailability of a proper space to conduct the sessions. Volunteers had been using a temple for this purpose. However, the temple owners were against all such activities inside the temple premises. But, after talking to the authorities at the community, this problem was sorted. </li>
+                            <li class="list-group-item">Today, full-fledged sessions of English and Mathematics are being held at Okhla slum which include studies, interactive sessions and fun activities. It is a matter of immense pride that all the students take full advantage of the sessions and that this initiative is gaining so much momentum.</li>
                         </ul>
                         <a href="#" class="btn btn-outline-dark">Sign Up</a>
                     </div>
@@ -456,12 +455,10 @@
                         <hr class="colored">
                         <img src="assets/img/mansarovar.jpg" class="img-responsive">
                         <ul class="list-group">
-                            <li class="list-group-item">60 Users</li>
-                            <li class="list-group-item">Unlimited Forums</li>
-                            <li class="list-group-item">Unlimited Reports</li>
-                            <li class="list-group-item">3,000 Entries per Month</li>
-                            <li class="list-group-item">200 MB Storage</li>
-                            <li class="list-group-item">Unlimited Support</li>
+                            <li class="list-group-item">President Nupur Bhardwaj, being a B. Tech. (Computer Science) student herself, always dreamt of introducing the underprivileged children to computers who may, otherwise, never know what a computer is. This is how the idea of giving a hands-on learning of computers to slum children began. This initiative was named Saksham and was started with eleven children of Kalkaji slum in November 2016.</li>
+                            <li class="list-group-item">Since this was an absolutely new concept for the children, the volunteers had to work very hard in order to design a curriculum for the same. Also, it was felt that rather than theoretical, a practical and hands-on approach should be followed so that the children may learn how to actually use a computer. In order to do this, the volunteers made them understand the concepts by linking them to real-life examples. Although it was very difficult for the volunteers to simplify the concepts for the children, they showed pure dedication and taught the students by befriending them. Ramanujan College has supported project Saksham by permitting the volunteers to take practical sessions in its computer lab. The students were overjoyed when they were allotted computer systems of their own.</li>
+                            <li class="list-group-item">This initiative has been fairly successful as the children now know how to use softwares like MS Word and MS Paint. They also know the advantages and disadvantages of a computer and its importance in our lives.</li>
+                            <li class="list-group-item">Apart from teaching the softwares, the volunteers involved the children in computer games and movies so that they do not get bored and get to know the fun side of computers.</li>
                         </ul>
                         <a href="#" class="btn btn-outline-dark">Sign Up</a>
                     </div>

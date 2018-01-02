@@ -1,4 +1,4 @@
-//require('dotenv').config();
+require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -47,7 +47,7 @@ app.use('/users', userRouter);
 app.use('/event',eventRouter);
 app.use('/member',memberRouter);
 app.use('/test',testRouter);
-app.use('/admin', [Verify.verifyOrdinaryUser, Verify.verifyAdmin,express.static(path.join(__dirname, 'admin'))]);
+app.use('/admin', [Verify.verifyOrdinaryUser,express.static(path.join(__dirname, 'admin'))]);
 
 
 
