@@ -306,6 +306,17 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
     $scope.message = "Loading ...";
     $(window).on("load", function() {
         $("#myCarousel").carousel("cycle");
+        $(".testimonials-carousel").owlCarousel({
+            singleItem: true,
+            navigation: true,
+            pagination: true,
+            autoHeight: true,
+            navigationText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            transitionStyle: "backSlide"
+        });
     });
     var filterList = {
         init: function() {
@@ -378,16 +389,6 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
             $scope.message = "Error: " + response.status + " " + response.statusText;
             console.log($scope.message);
         });
-    testFactory.query(
-        function (response) {
-            $scope.tests = response;
-            //$scope.showMenu=true;
-            
-        },
-        function (response) {
-            $scope.message = "Error: " + response.status + " " + response.statusText;
-            console.log($scope.message);
-        });
     $scope.carouselInitializer = function() {
         $(".portfolio-carousel").owlCarousel({
             singleItem: true,
@@ -415,20 +416,6 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
             ],
         });
         };
-    $scope.carouselInitializer3 = function() {
-        $(".testimonials-carousel").owlCarousel({
-            singleItem: true,
-            navigation: true,
-            pagination: true,
-            autoHeight: true,
-            navigationText: [
-                "<i class='fa fa-angle-left'></i>",
-                "<i class='fa fa-angle-right'></i>"
-            ],
-            transitionStyle: "backSlide"
-        });
-
-      };
       $timeout(function() {
         filterList.init();
         }, 2000);
