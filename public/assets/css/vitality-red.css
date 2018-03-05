@@ -467,6 +467,11 @@ hr.colored {
 	bottom: 0;
 	right: 0;
 }
+#about1 .item:before {
+  content: "";
+  display: block;
+  padding-top:100%;
+}
 .about-carousel a {
   color: #ffffff;
 	text-decoration: none;
