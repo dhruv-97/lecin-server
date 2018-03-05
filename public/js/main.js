@@ -304,6 +304,9 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
     $scope.showMenu = false;
     $scope.showEvents = false;
     $scope.message = "Loading ...";
+    $scope.showExtra = true;
+    if(window.innerWidth>780)
+        $scope.showExtra = false;
     $(window).on("load", function() {
         $("#myCarousel").carousel("cycle");
         $(".testimonials-carousel").owlCarousel({
@@ -317,7 +320,95 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
             ],
             transitionStyle: "backSlide"
         });
+        $("#homecover").owlCarousel({
+            singleItem: true,
+            navigation: true,
+            pagination: false,
+            navigationText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+            autoHeight: true,
+            mouseDrag: false,
+            touchDrag: false,
+            transitionStyle: "fadeUp"
+        });
+        $("#about2").owlCarousel({
+            items: 3,
+            navigation: true,
+            pagination: false,
+            navigationText: [
+                "<i class='fa fa-angle-left'></i>",
+                "<i class='fa fa-angle-right'></i>"
+            ],
+        });
     });
+    var process = [
+        {
+            name: "Roobaru",
+            description: "Roobaru sessions are interactive and awareness sessions including educational trips and sports activities to give children exposure, enhance their communication skills and help them socialize. Through Roobaru, we aim to understand the children and their lives better.",
+            image: "assets/img/mansarovar.jpg"
+        },{
+    
+        name: "GYANMUDRA",
+        description: "It refers to the logical reasoning and language sessions organized every weekend with an aim to develop critical thinking skills, problem solving attitude and decision-making ability in children.",
+        image: "assets/img/ip.jpg"
+    },
+    {
+        name: "Kalakriti",
+        description: "This is an art and craft program, which aims to develop creative thinking skills of children and enhance their innovation and creative ability to encourage self-expression. Organized once in a month, Kalakriti sessions have individual as well as group activities with different themes (like love, environment, seasons, etc.) and objectives (like peace, positivity, etc.) for each month.",
+        image: "assets/img/okhla.jpg"
+    },
+    {
+        name: "Naitikta",
+        description: "Naitikta is a program, which aims to inculcate life skills education in children to develop qualities like confidence, positive attitude, and question asking ability, teamwork and leadership. Life skills like cooperation, good listening, being fair, respect, integrity, etc. shall be inculcated in children with the help of storytelling, role-plays, group activities and group interactions.",
+        image: "assets/img/mansarovar.jpg"
+    },
+    
+    {
+        name: "Alfaazon ki Jugalbandi",
+        description: "This program’s objective is to make children use their imagination and creativity to express their opinion verbally or in written on various topics. Organized once in two months, Alfaazon ki Jugalbandi answers the question about what children think and how they think.",
+        image: "assets/img/ip.jpg"
+    },
+    ];
+    $scope.process1 = process[1];
+    $scope.process2 = process[2];
+    $scope.process3 = process[3];
+    var state = 0;
+    $scope.processNext = function(){
+        if(state==0){
+            $scope.process1 = process[2];
+            $scope.process2 = process[3];
+            $scope.process3 = process[4];
+            state = 1;
+            $scope.apply();
+            
+        }
+        if(state=-1){
+            $scope.process1 = process[1];
+            $scope.process2 = process[2];
+            $scope.process3 = process[3];
+            state = 0;
+            $scope.apply(); 
+        }
+    };
+    $scope.processPrev = function(){
+        if(state==0){
+            $scope.process1 = process[0];
+            $scope.process2 = process[1];
+            $scope.process3 = process[2];
+            state = -1;
+            $scope.apply();
+            
+        }
+        if(state=1){
+            $scope.process1 = process[1];
+            $scope.process2 = process[2];
+            $scope.process3 = process[3];
+            state=0;
+            $scope.apply();
+        }
+    };
     var filterList = {
         init: function() {
 
@@ -406,7 +497,7 @@ angular.module('fileUpload', ['ngResource','ocNgRepeat'])
         
     };
         $scope.carouselInitializer2 = function() {
-        $(".about-carousel").owlCarousel({
+        $("#about1").owlCarousel({
             items: 3,
             navigation: true,
             pagination: false,

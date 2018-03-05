@@ -13,36 +13,42 @@ body {
 .img-centered {
   margin: 0 auto;
 }
+.nodesk{
+  display: none;
+}
 header {
-  background-image: url('../img/kids.jpg');
+  /* background-image: url('../img/kids.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   text-align: center;
   color: white;
 }
-header .intro-text {
-  padding-top: 100px;
+header .item{
+  height: 90vh;
+}
+header .item .intro-text {
+  padding-top: 50px;
   padding-bottom: 50px;
 }
-header .intro-text .intro-lead-in {
+header .item .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
 }
-header .intro-text .intro-heading {
+header .item .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .content-row {
@@ -461,10 +467,9 @@ hr.colored {
 	bottom: 0;
 	right: 0;
 }
-.about-carousel .item:before {
-  content: "";
-	display: block;
-  padding-top:100%;
+.about-carousel a {
+  color: #ffffff;
+	text-decoration: none;
 }
 .navbar a:focus {
   outline: none;
@@ -832,12 +837,21 @@ aside.cta-quote span.quote {
     padding: 0 100px 20px 20px;
   }
 }
-.portfolio-carousel {
+.portfolio-carousel, .home-carousel {
   padding: 0;
   color: white;
   background-color: #222222;
 }
-.portfolio-carousel .item {
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.portfolio-carousel .item, .home-carousel .item {
   background-color: #222222;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -914,6 +928,9 @@ aside.cta-quote span.quote {
     padding: 155px 55px 155px;
     text-align: left;
     min-height: 100%;
+  }
+  #homecover .item{
+    text-align: center;
   }
   .portfolio-carousel .item .portfolio-image {
     margin-top: 0;
