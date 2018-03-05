@@ -381,7 +381,7 @@
                 </div>
             </div>
             <div class="row content-row">
-                <button style="float: left; position:absolute; transform: translate(0px, 200px); background-color:red; z-index:200; " ng-click="processPrev()" class="nophone"><i class="fa fa-angle-left"></i></button>
+                <button ng-if="!showExtra" style="float: left; position:absolute; transform: translate(0px, 200px); background-color:red; z-index:200; " ng-click="processPrev()" class="nophone"><i class="fa fa-angle-left"></i></button>
                 <div class="col-md-4">
                     <div class="pricing-item featured-first">
                         <h3>{{process1.name}}</h3>
@@ -443,7 +443,7 @@
                     </div>
                 </div>
                
-                <button style="float: right; position:absolute; transform: translate(0px, 200px); background-color:red; z-index:200; " ng-click="processNext()" class="nophone"><i class="fa fa-angle-right"></i></button>
+                <button ng-if="!showExtra" style="float: right; position:absolute; transform: translate(0px, 200px); background-color:red; z-index:200; " ng-click="processNext()" class="nophone"><i class="fa fa-angle-right"></i></button>
             </div>
         </div>
     </section>
