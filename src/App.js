@@ -4,7 +4,7 @@ import { Container, Row, Col, Nav, NavItem, NavLink, Button } from 'reactstrap'
 
 // Custom dependencies
 import './App.css';
-import img from './assets/img/about_img.jpg'
+import img from './assets/img/about_img.png'
 import underline from './assets/img/underline.png'
 class App extends Component {
 
@@ -53,15 +53,15 @@ class App extends Component {
              <Col lg="3"></Col>
           </Row>
           <Row style={{marginTop: "4em"}}>
-            <Col lg={{ size: 5, offset: 1 }} xs="12" sm="12" md={{ size: 5, offset: 1 }}>
+            <Col lg={{ size: 6, offset: 1 }} xs="12" sm="12" md={{ size: 5, offset: 1 }}>
                 <Row>
-                  <Col style={{letterSpacing: "4px"}}>
-                  <img src={underline} className="stick-1"/>
-                    <h1 style={{position: "relative"}}>LET'S EDUCATE</h1>
+                  <Col className="top_heading">
+                    <img src={underline} className="stick-1"/>
+                    <h1>LET'S EDUCATE</h1>
                     <img src={underline} className="stick-2" />
-                    <h1 style={{ position: "relative" }}> CHILDREN IN NEED</h1>
+                    <h1> CHILDREN IN NEED</h1>
                   </Col>
-                  <Col xs={{size: 10, offset: 1}}>
+                  <Col xs={{size: 10}} className="top_subheading">
                     <h2>
                       Learning today.
                     </h2>
@@ -69,15 +69,15 @@ class App extends Component {
                       Leading tomorrow.
                     </h2>
                   </Col>
-                  <Col xs={{ size: 5, offset: 1 }} style={{marginTop: "2em"}}>
+                  <Col xs={{ size: 6}} style={{marginTop: "2em"}}>
                     <Button color="success" className="donate-btn">
                       Donate Now
                     </Button>
                   </Col>
                 </Row>
              </Col>
-             <Col lg={{size:4, offset: 1}} className="about_img">
-                <img src={img} style={{height: "30em"}}/>
+             <Col lg={{size:4}} className="about_img">
+                <img src={img} className="top_img"/>
              </Col>
           </Row>
        </Container>
