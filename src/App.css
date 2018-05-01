@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:700');
 .App {
-  text-align: center;
+  font-family: 'Cabin', sans-serif;
 }
 
 .App-logo {
@@ -25,4 +26,48 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.nav-link{
+  color: #000;
+  font-weight: bold;
+  padding: 5px 24px 5px 24px;
+}
+
+.nav-link:hover{
+  color: #000;
+  font-weight: bold;
+}
+
+.highlighted.nav-link{
+  background: #fecc00;
+  border: 1px solid transparent;
+}
+
+.highlighted.nav-link:hover{
+  border: 1px solid #000;
+}
+
+.about_img{
+}
+
+.stick-1{
+  position: absolute;
+  top: 33px;
+  left: 0;
+  width: 21em;
+  height: 15px;
+}
+
+.stick-2{
+    position: absolute;
+    top: 87px;
+    left: 0;
+    width: 25em;
+    height: 15px;
+}
+
+.donate-btn{
+    background: #286702;
+    letter-spacing: 2px;
+    width: 100%;
 }
