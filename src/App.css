@@ -1,0 +1,107 @@
+@font-face{
+  font-family: 'brown-regular';
+  src: url('./assets/fonts/brown/BrownRegular.ttf')
+}
+
+@font-face{
+  font-family: 'brown-bold';
+  src: url('./assets/fonts/brown/BrownBoldAlt.ttf')
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.nav-item{
+}
+.nav-link{
+  color: #000;
+  font-family: 'brown-bold';
+  padding: 5px 24px 5px 24px;
+}
+
+.nav-link:hover{
+  color: #000;
+  font-weight: bold;
+}
+
+.highlighted.nav-link{
+  background: #fecc00;
+  border: 1px solid transparent;
+}
+
+.highlighted.nav-link:hover{
+  border: 1px solid #000;
+}
+
+.top_heading{
+  font-family: 'brown-bold';
+  letter-spacing: 4px;
+  margin-top: 2em;
+}
+
+.top_heading>h1{
+  position: relative;
+  font-size: 3em
+}
+
+.top_subheading{
+  font-family: 'brown-regular';
+  margin-top: 1em;
+}
+
+.top_subheading>h2{
+  font-size: 2.5em
+}
+
+.stick-1{
+  position: absolute;
+  top: 33px;
+  left: 0;
+  width: 21em;
+  height: 15px;
+}
+
+.stick-2{
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 30em;
+    height: 15px;
+}
+
+.donate-btn{
+    background: #286702;
+    letter-spacing: 2px;
+    font-family: 'brown-regular';
+    font-size: 25px;
+    width: 96%;
+}
+
+.top_img{
+  height: 39em;
+  margin-top: -57px;
+  margin-left: -37px;
+  transform: rotate(5deg);
+  height: 35em;
+}
