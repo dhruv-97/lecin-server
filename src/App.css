@@ -39,7 +39,7 @@
   border: 1px solid #cccccc7d;
 }
 .nav-link{
-  color: #000;transform: rotate(5deg);
+  color: #000;
   font-family: 'brown-bold';
   padding: 5px 24px 5px 24px;
 }
@@ -111,7 +111,7 @@
 }
 
 .about_us{
-  font-family: brown-regular;
+  font-family: 'brown-regular';
 }
 .underline_about{
   height: 20px;
@@ -122,4 +122,22 @@
 
 .underline_about + h2{
   position: relative;
+}
+.prog_thumb_wrap{
+    font-family: 'brown-bold';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #7a06b721;
+    color: #fff;
+    cursor: pointer;
+}
+
+.prog_thumb_wrap:hover{
+  align-items: flex-start;
+  background: #7906b798;
 }

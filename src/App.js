@@ -1,6 +1,6 @@
 // Package Dependencies
 import React, { Component } from 'react';
-import { Container, Row, Col, Nav, NavItem, NavLink, Button } from 'reactstrap'
+import { Container, Row, Col, Nav, NavItem, NavLink, Button, Card, CardImg } from 'reactstrap'
 
 // Custom dependencies
 import './App.css';
@@ -138,7 +138,48 @@ class App extends Component {
                   <h2>Our Programs</h2>
                 </Col>
               </Row>
+              <Row style={{margin: "30px -15px 30px -15px"}}>
+                <Col lg="2">
+                </Col>
+                <Col lg="4">
+                  <Card className="text-center">
+                  <div className="prog_thumb_wrap">
+                    <h3>GYANMUDRA</h3>
+                  </div>
+                  <CardImg top src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png" 
+                    alt="Card image cap" />
+                  </Card>
+                </Col>
+                <Col lg="4">
+                  <Card>
+                  <CardImg top src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png" 
+                    alt="Card image cap" />
+                  </Card>
+                </Col>
+                <Col lg="2"></Col>
+              </Row>
+              <Row>
+                <Col lg="2">
+                </Col>
+                <Col lg="4">
+                  <Card>
+                  <CardImg top src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png" 
+                    alt="Card image cap" />
+                  </Card>
+                </Col>
+                <Col lg="4">
+                  <Card>
+                  <CardImg top src="http://www.ieeeaustsb.org/files/2017/05/placeholder-female-square.png" 
+                    alt="Card image cap" />
+                  </Card>
+                </Col>
+                <Col lg="2"></Col>
+              </Row>
             </Col>
+          </Row>
+          <Row style={{height: "30em", background: "#cccccc38", marginTop: "4em"}}>
+              <Col>
+              </Col>
           </Row>
        </Container>
     );
