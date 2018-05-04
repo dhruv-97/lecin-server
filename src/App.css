@@ -8,7 +8,7 @@
   src: url('./assets/fonts/brown/BrownBoldAlt.ttf')
 }
 
-.App-logo {
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
@@ -33,9 +33,13 @@
   to { transform: rotate(360deg); }
 }
 .nav-item{
+} */
+
+.App{
+  border: 1px solid #cccccc7d;
 }
 .nav-link{
-  color: #000;
+  color: #000;transform: rotate(5deg);
   font-family: 'brown-bold';
   padding: 5px 24px 5px 24px;
 }
@@ -102,6 +106,20 @@
   height: 39em;
   margin-top: -57px;
   margin-left: -37px;
-  transform: rotate(5deg);
+  /* transform: rotate(5deg); */
   height: 35em;
+}
+
+.about_us{
+  font-family: brown-regular;
+}
+.underline_about{
+  height: 20px;
+  top: 20px;
+  position: absolute;
+  left: 6px;
+}
+
+.underline_about + h2{
+  position: relative;
 }
