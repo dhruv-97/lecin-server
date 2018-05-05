@@ -134,7 +134,7 @@ class App extends Component {
           </Container>
           <div className="container-fluid">
              <Row style={{marginTop: "2em"}}>
-                <Col lg="12" xs="12" sm="12" md="12" style={{background: "#c4a17e1f", height: "40em"}}
+                <Col lg="12" xs="12" sm="12" md="12" style={{background: "#c4a17e1f", height: "45em"}}
                      className="about_us">
                    <Row style={{marginBottom: "4em"}}>
                       <Col lg={{size:1}} style={{marginRight: "5.5em"}}/>
@@ -204,7 +204,7 @@ class App extends Component {
                             <Col lg={{size: 4, offset: 2}} md={{size: 4, offset: 2}}>
                                <Row style={{position: "relative", top: "25%"}}>
                                   <Col>
-                                     <h3>GYANMUDRA</h3>
+                                     <h3 style={{fontWeight: 600}}>GYANMUDRA</h3>
                                   </Col>
                                </Row>
                                <Row style={{position: "relative", top: "25%"}}>
@@ -217,6 +217,14 @@ class App extends Component {
                                      </p>
                                   </Col>
                                </Row>
+                            </Col>
+                         </Row>
+                         <Row>
+                            <Col lg="12" style={{display: "flex", justifyContent: "center", marginTop: "4em"}}>
+                               <div className="navigators selected"/>
+                               <div className="navigators"/>
+                               <div className="navigators"/>
+                               <div className="navigators"/>
                             </Col>
                          </Row>
                       </Container>
