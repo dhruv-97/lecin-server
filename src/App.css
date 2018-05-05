@@ -141,3 +141,46 @@
   align-items: flex-start;
   background: #7906b798;
 }
+
+
+.dot-col{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90px;
+}
+.blue {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #e8d5bc;
+    position: relative;
+}
+
+.white {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: #fcf9f5;
+    position: absolute;
+    top: 5px;
+    left: 5px;;
+}
+
+.red {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: #e8d5bc;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.dot-title{
+    position: absolute;
+    top: 3em;
+    color: #c4a17e;
+    text-align: center;
+    font-size: 1.3em;
+}
