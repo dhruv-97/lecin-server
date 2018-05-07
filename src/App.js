@@ -1,7 +1,9 @@
 // Package Dependencies
 import React, { Component } from 'react';
 import { Container, Row, Col, Nav, NavItem, NavLink, Button, Card, CardImg } from 'reactstrap'
+import { CSSTransitionGroup } from 'react-transition-group'
 
+import 'animate.css/animate.min.css';
 // Custom dependencies
 import './App.css';
 import img from './assets/img/about_img.png'
@@ -13,7 +15,39 @@ class App extends Component {
 
   constructor(props){
      super(props);
+     this.programs = [
+        {
+           title: 'GYANMUDRA',
+           description: 'It refers to the logical reasoning and language sessions organized every weekend with an aim to develop critical thinking skills, problem solving attitude and decision-making ability in children.'
+        },
+        {
+           title: 'KALAKRITI',
+           description: 'Organized once in a month, Kalakriti sessions have individual as well as group activities with different themes (like love, environment, seasons, etc.) and objectives (like peace, positivity, etc.) for each month.'
+        },
+        {
+           title: 'NAITIKTA',
+           description: 'Naitikta is a program, which aims to inculcate life skills education in children to develop qualities like confidence, positive attitude, and question asking ability, teamwork and leadership.'
+        },
+        {
+           title: 'ALFAZON KI JUGALBANDI',
+           description: 'Organized once in two months, Alfaazon ki Jugalbandi answers the question about what children think and how they think.'
+        }
+     ];
+     this.state = {
+        currentProgram : this.programs[0],
+        animatedClass: 'animated fadeIn',
+     };
+
+     this.selectProgram = this.selectProgram.bind(this);
   }
+
+  selectProgram(index){
+     this.setState(()=>({
+           currentProgram: this.programs[index]
+        })
+     );
+  }
+
   render() {
     return (
        <div>
@@ -148,42 +182,43 @@ class App extends Component {
                       <Col style={{position: "inherit"}}>
                          <Row>
                             <Col lg={{size: 1, offset: 1}} className="dot-col">
-                               <div className="blue">
+                               <div className="blue" onClick={() => this.selectProgram(0)}>
                                   <div className="white">
                                      <div className="red"></div>
                                   </div>
                                </div>
-                               <span style={{fontWeight: 600}} className="dot-title">
+                               <span className="dot-title"
+                                     onClick={() => this.selectProgram(0)}>
                                   GYANMUDRA
                                </span>
                             </Col>
                             <Col lg={{size: 1, offset: 3}} className="dot-col">
-                               <div className="blue">
+                               <div className="blue" onClick={() => this.selectProgram(1)}>
                                   <div className="white">
                                      <div className="red"></div>
                                   </div>
                                </div>
-                               <span className="dot-title">
+                               <span className="dot-title" onClick={() => this.selectProgram(1)}>
                                   KALAKRITI
                                </span>
                             </Col>
                             <Col lg={{size: 1, offset: 5}} className="dot-col">
-                               <div className="blue">
+                               <div className="blue" onClick={() => this.selectProgram(2)}>
                                   <div className="white">
                                      <div className="red"></div>
                                   </div>
                                </div>
-                               <span className="dot-title">
+                               <span className="dot-title" onClick={() => this.selectProgram(2)}>
                                   NAITIKTA
                                </span>
                             </Col>
                             <Col lg={{size: 1, offset: 7}} className="dot-col">
-                               <div className="blue">
+                               <div className="blue" onClick={() => this.selectProgram(3)}>
                                   <div className="white">
                                      <div className="red"></div>
                                   </div>
                                </div>
-                               <span className="dot-title">
+                               <span className="dot-title" onClick={() => this.selectProgram(3)}>
                                   ALFAZON KI JUGALBANDI
                                </span>
                             </Col>
@@ -192,33 +227,41 @@ class App extends Component {
                    </Row>
                    <Row style={{marginTop: "10em"}}>
                       <Container>
-                         <Row>
-                            <Col lg="1"/>
-                            <Col lg={{size: 3, offset: 1}} md={{size: 4, offset: 1}}>
-                               <Card className="text-center" style={{width: "25em"}}>
-                                  <CardImg
-                                     src="http://www.pixedelic.com/themes/geode/demo/wp-content/uploads/sites/4/2014/04/placeholder.png"
-                                     alt="Card image cap"/>
-                               </Card>
-                            </Col>
-                            <Col lg={{size: 4, offset: 2}} md={{size: 4, offset: 2}}>
-                               <Row style={{position: "relative", top: "25%"}}>
-                                  <Col>
-                                     <h3 style={{fontWeight: 600}}>GYANMUDRA</h3>
-                                  </Col>
-                               </Row>
-                               <Row style={{position: "relative", top: "25%"}}>
-                                  <Col>
-                                     <p style={{fontSize: "18px"}}>
-                                        It refers to the logical reasoning and language
-                                        sessions organized every weekend with an aim to
-                                        develop critical thinking skills, problem solving
-                                        attitude and decision-making ability in children.
-                                     </p>
-                                  </Col>
-                               </Row>
-                            </Col>
-                         </Row>
+                         <CSSTransitionGroup
+                            transitionName={{
+                               appear: 'animated',
+                               appearActive: 'fadeIn'
+                            }}
+                            transitionAppear={true}
+                            transitionAppearTimeout={2000}
+                         >
+                            <Row style={{height: "20em"}}>
+                               <Col lg="1"/>
+                               <Col lg={{size: 3, offset: 1}} md={{size: 4, offset: 1}}>
+                                  <Card className="text-center" style={{width: "25em"}}>
+                                     <CardImg
+                                        src="http://www.pixedelic.com/themes/geode/demo/wp-content/uploads/sites/4/2014/04/placeholder.png"
+                                        alt="Card image cap"/>
+                                  </Card>
+                               </Col>
+                               <Col lg={{size: 4, offset: 2}} md={{size: 4, offset: 2}}>
+                                  <Row style={{position: "relative", top: "25%"}}>
+                                     <Col>
+                                        <h3 style={{fontWeight: 600}}>
+                                           {this.state.currentProgram.title}
+                                        </h3>
+                                     </Col>
+                                  </Row>
+                                  <Row style={{position: "relative", top: "25%"}}>
+                                     <Col>
+                                        <p style={{fontSize: "18px"}}>
+                                           {this.state.currentProgram.description}
+                                        </p>
+                                     </Col>
+                                  </Row>
+                               </Col>
+                            </Row>
+                         </CSSTransitionGroup>
                          <Row>
                             <Col lg="12" style={{display: "flex", justifyContent: "center", marginTop: "4em"}}>
                                <div className="navigators selected"/>

@@ -35,6 +35,10 @@
 .nav-item{
 } */
 
+html,body{
+    overflow-x: hidden;
+}
+
 .App{
   border: 1px solid #cccccc7d;
 }
@@ -148,7 +152,13 @@
     justify-content: center;
     position: absolute;
     top: 90px;
+    cursor: pointer;
 }
+
+.dot-col:hover{
+    font-weight: 600;
+}
+
 .blue {
     border-radius: 50%;
     height: 40px;
